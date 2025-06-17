@@ -1,3 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter");
+
 :root {
-    
+    --primary-font:"Inter", Helvetica, sans-serif;
+}
+
+body {
+    background-color: white;
+    font-family:var(--primary-font);
+}
+
+/* buttons don't like taking on the font */ 
+
+button {
+    font-family:var(--primary-font);
+}
+
+.nav {
+    background-color:rgb(246, 253, 255);
+    padding:10px;
 }
