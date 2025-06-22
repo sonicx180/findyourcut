@@ -1,7 +1,15 @@
-* {
-    text-align:center;
+section {
+    margin:20px;
+}
+.works {
+	display:flex;
+	align-items: center;
+    gap:20px;
+    width:75%;
 }
 
-.header {
-    
+.hero-img {
+    border-radius:50%; /* round effect */
+    margin-left:auto;
 }
+

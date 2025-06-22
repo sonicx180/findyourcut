@@ -2,6 +2,7 @@
 
 :root {
 	--primary-font: 'Inter', Helvetica, sans-serif;
+	--secondary-color:rgb(233, 250, 255);
 }
 
 body {
@@ -10,32 +11,64 @@ body {
 	font-family: var(--primary-font);
 }
 
-/* buttons don't like taking on the font */
+/* buttons don't like taking on the font lol */
 
 button {
 	font-family: var(--primary-font);
+	border:none;
+	border-radius:3px;
+	background-color:var(--secondary-color);
+	padding:20px;
+	cursor:pointer;
 }
 
+h2 {
+	font-size:2rem;
+}
+
+p {
+	font-size:1.6rem;
+}
+a {
+	text-decoration: none;
+}
 .nav {
-	background-color: rgb(233, 250, 255);
+	background-color: var(--secondary-color);
 	padding: 10px;
-    display:flex;
-    align-items:center;
-	justify-content: center;
-}
-.hamburger {
-    cursor:pointer;
-	float:left;
+	display: flex;
+	align-items: center;
+	position: relative;
 }
 
-/* Credits to w3schools for the hamburger */
-.hamburger div {
+.dropdown-content {
+	display:block;
+}
+.dropdown {
+	cursor: pointer;
+}
+
+/* Credits to w3schools for the hamburger code */
+.dropdown div {
 	width: 35px;
 	height: 5px;
 	background-color: black;
 	margin: 6px 0;
 }
 
+/* Getting the title to the center */
 .title {
-	text-align:center !important;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 1.5rem;
 }
+.footer {
+	
+	position:fixed;
+	bottom:0;
+	background-color:var(--secondary-color);
+	width:100%;
+	text-align:center;
+}
+
+
