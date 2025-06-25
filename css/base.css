@@ -5,14 +5,37 @@
 	--secondary-color:rgb(233, 250, 255);
 }
 
-body {
-	background-color: white;
-	margin: 0;
-	font-family: var(--primary-font);
+::-webkit-scrollbar {
+	display:none;
 }
 
-/* buttons don't like taking on the font lol */
+/* Basic fade animation lol */
 
+@keyframes fadeIn {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+body {
+	min-height:100dvh;
+	display:flex;
+	flex-direction:column;
+	margin: 0;
+	padding:0;
+	font-family: var(--primary-font);
+	overflow-y:auto;
+	overflow-x:hidden;
+	animation-name:fadeIn;
+	animation-duration:4s;
+}
+
+main {
+	flex:1;
+}
+/* buttons don't like taking on the font lol */
 button {
 	font-family: var(--primary-font);
 	border:none;
@@ -32,23 +55,33 @@ p {
 a {
 	text-decoration: none;
 }
+a:hover {
+	text-decoration:underline;
+}
+a:visited {
+	color:inherit;
+}
 .nav {
 	background-color: var(--secondary-color);
 	padding: 10px;
+	width:100vw;
 	display: flex;
 	align-items: center;
-	position: relative;
-}
-
-.dropdown-content {
-	display:block;
 }
 .dropdown {
 	cursor: pointer;
 }
+.dropdown-content {
+	display:none;
+}
+.dropdown-content-active {
+	display:flex;
+	flex-direction: column;
+	line-height:2;
+}
 
 /* Credits to w3schools for the hamburger code */
-.dropdown div {
+.dropdown-block {
 	width: 35px;
 	height: 5px;
 	background-color: black;
@@ -63,12 +96,9 @@ a {
 	font-size: 1.5rem;
 }
 .footer {
-	
-	position:fixed;
 	bottom:0;
 	background-color:var(--secondary-color);
 	width:100%;
 	text-align:center;
 }
-
 

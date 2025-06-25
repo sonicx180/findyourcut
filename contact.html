@@ -4,8 +4,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href="base.css" />
-		<link rel="stylesheet" href="contact.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/contact.css" />
 
 		<title>Find Your next Haircut Style!</title>
 	</head>
@@ -13,24 +13,64 @@
 		<header class="header">
 			<nav class="nav">
 				<div class="dropdown">
-					<div></div>
-					<div></div>
-					<div></div>
+					<div class="dropdown-block"></div>
+					<div class="dropdown-block"></div>
+					<div class="dropdown-block"></div>
+					<div class="dropdown-content">
+						<a href="/" class="dropdown-link"> Home</a>
+						<a href="/upload.html" class="dropdown-link">
+							Upload
+						</a>
+						<a href="/gallery.html" class="dropdown-link">
+							Gallery
+						</a>
+						<a href="/contact.html" class="dropdown-link">
+							Contact
+						</a>
+					</div>
 				</div>
 				<h1 class="title">FindYourCut</h1>
 			</nav>
 		</header>
 		<!-- main code here!-->
-		<h1>Need help?</h1>
-		<h2 style="font-weight: 100; font-size: 1.6rem">
-			You can fill out the form down below to get in touch
-		</h2>
-		<form></form>
+		<main>
+			<h1>Need help?</h1>
+			<h2 style="font-weight: 100; font-size: 1.6rem">
+				You can fill out the form down below to get in touch
+			</h2>
+			<form class="contact">
+				<fieldset>
+					<label
+						>Your name :
+						<input type="text" name="username" />
+					</label>
+
+					<label
+						>Your email:
+						<input type="email" name="email" />
+					</label>
+
+					<label
+						>What would you like to say?
+						<textarea
+							name="message"
+							placeholder="This website has a bad design and..."
+							cols = "40"
+							rows = "5"
+						></textarea>
+					</label>
+					<input type = "submit" value = "Click to Submit" />
+				</fieldset>
+			</form>
+		</main>
 		<footer class="footer">
 			<h3>
 				&copy; This project was created by
-				<a href="https://github.com/sonicx180"> Sonicx180</a>
+				<a href="https://github.com/sonicx180" target="_blank">
+					Sonicx180</a
+				>
 			</h3>
 		</footer>
+		<script src="nav.js"></script>
 	</body>
 </html>

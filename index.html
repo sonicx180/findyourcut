@@ -4,8 +4,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href="base.css" />
-		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/index.css" />
 
 		<title>Find Your next Haircut Style!</title>
 	</head>
@@ -13,14 +13,19 @@
 		<header class="header">
 			<nav class="nav">
 				<div class="dropdown">
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
-				<div class = "dropdown-content">
-					<a href = "/" class = "dropdown-link"> Home</a>
-					<a href = "/gallery.html" class = "dropdown-link"> Gallery </a>
-					<a href = "/contact.html" class = "dropdown-link"> Contact </a>
+					<div class="dropdown-block"></div>
+					<div class="dropdown-block"></div>
+					<div class="dropdown-block"></div>
+					<div class="dropdown-content">
+						<a href="/" class="dropdown-link"> Home</a>
+						<a href = "/upload.html" class = "dropdown-link"> Upload </a>
+						<a href="/gallery.html" class="dropdown-link">
+							Gallery
+						</a>
+						<a href="/contact.html" class="dropdown-link">
+							Contact
+						</a>
+					</div>
 				</div>
 				<h1 class="title">FindYourCut</h1>
 			</nav>
@@ -31,8 +36,8 @@
 					<h2>How does this work?</h2>
 					<p class="explaination">
 						We find high quality images uploaded from others, <br />
-						each with a unique style. <br /> Every cut is different from
-						the rest
+						each with a unique style. <br />
+						Every cut is different from the rest
 					</p>
 				</div>
 				<img
@@ -49,16 +54,18 @@
 				</p>
 				<button id="gen-btn">Find a Haircut</button>
 			</section>
-			<div class="gen-imgs"></div>
+			<div class="gen-img">
+				<h3 class = "img-title"></h3>
+			</div>
 		</main>
 		<footer class="footer">
 			<h3>
 				&copy; This project was created by
-				<a href="https://github.com/sonicx180"> Sonicx180</a>
+				<a href="https://github.com/sonicx180" target="_blank">
+					Sonicx180</a
+				>
 			</h3>
 		</footer>
-		<script>
-			const genBtn = document.getElementById("gen-btn");
-		</script>
+		<script src="nav.js"></script>
 	</body>
 </html>

@@ -1,0 +1,30 @@
+body {
+    text-align:center;
+}
+
+main {
+    display:flex;
+    flex-direction:column;
+}
+form {
+    margin:0 auto;
+
+}
+label {
+    display:block;
+    margin:15px;
+}
+
+textarea {
+    display:block;
+    margin:15px auto;
+    resize:vertical;
+    padding:15px;
+}
+
+input[type="submit"] {
+    border:none;
+    background-color:var(--secondary-color);
+    padding:10px;
+    cursor:pointer;
+}
