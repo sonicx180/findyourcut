@@ -10,3 +10,8 @@ main {
 form {
     margin:0 auto;
 }
+
+label {
+    display:block;
+    margin:15px;
+}

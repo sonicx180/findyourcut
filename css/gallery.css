@@ -1,0 +1,22 @@
+h1 {
+    text-align:center;
+}
+
+.haircut-container {
+    display:flex;
+   align-items: center;
+   justify-content: center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.haircut-item {
+    border: 2px solid black;
+    border-radius:10px;
+    text-align:center;
+}
+
+.haircut-item img {
+    max-height:15%;
+}
+

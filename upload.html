@@ -1,47 +1,67 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/upload.css" />
-    <title>Upload - FindYourCut</title>
-</head>
-<body>
-    <header class="header">
-        <nav class="nav">
-            <div class="dropdown">
-                <div class="dropdown-block"></div>
-                <div class="dropdown-block"></div>
-                <div class="dropdown-block"></div>
-                <div class="dropdown-content">
-                    <a href="/" class="dropdown-link"> Home</a>
-                    <a href="/upload.html" class="dropdown-link"> Upload </a>
-                    <a href="/gallery.html" class="dropdown-link"> Gallery </a>
-                    <a href="/contact.html" class="dropdown-link"> Contact </a>
-                </div>
-            </div>
-            <h1 class="title">FindYourCut</h1>
-        </nav>
-    </header>
-    <main>
-        <h1> Upload a Haircut</h1>
-        <form action = "/" method = "POST">
-            <fieldset>
-                <label for = "img-title"> Title of the image : 
-                    <input type = "text" name = "img-title" />
-                </label>
-            </fieldset>
-        </form>
-    </main>
-    <footer class="footer">
-        <h3>
-            &copy; This project was created by
-            <a href="https://github.com/sonicx180" target="_blank">
-                Sonicx180</a>
-        </h3>
-    </footer>
-    <script src="nav.js"></script>
-</body>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/upload.css" />
+		<title>Upload - FindYourCut</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="nav">
+				<div class="dropdown">
+					<div class="dropdown-block"></div>
+					<div class="dropdown-block"></div>
+					<div class="dropdown-block"></div>
+					<div class="dropdown-content">
+						<a href="/" class="dropdown-link"> Home</a>
+						<a href="/upload.html" class="dropdown-link">
+							Upload
+						</a>
+						<a href="/gallery.html" class="dropdown-link">
+							Gallery
+						</a>
+						<a href="/contact.html" class="dropdown-link">
+							Contact
+						</a>
+					</div>
+				</div>
+				<h1 class="title">FindYourCut</h1>
+			</nav>
+		</header>
+		<main>
+			<h1>Upload a Haircut</h1>
+			<form action="/" method="POST">
+				<fieldset>
+					<label for="img-title">
+						Title of the image :
+						<input type="text" name="img-title" />
+					</label>
+					<label for="img-file">
+						Upload Image :
+						<input type="file" name="img-file" accept="image/*" />
+					</label>
+					<img />
+				</fieldset>
+			</form>
+		</main>
+		<footer class="footer">
+			<h3>
+				&copy; This project was created by
+				<a href="https://github.com/sonicx180" target="_blank">
+					Sonicx180</a
+				>
+			</h3>
+		</footer>
+		<script src="nav.js"></script>
+		<script>
+			const fileInput = document.querySelector('[name="img-file"]');
+			const image = document.querySelector('img');
+			fileInput.addEventListener('change', (e) => {
+				image.src = URL.createObjectURL(e.target.files[0]);
+			});
+		</script>
+	</body>
 </html>
