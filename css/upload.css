@@ -5,13 +5,25 @@ body {
 main {
     display:flex;
     flex-direction:column;
+   
 }
-
 form {
     margin:0 auto;
 }
-
+fieldset {
+    width:fit-content;
+}
 label {
     display:block;
     margin:15px;
+}
+
+img {
+  margin:10px;
+  max-width:300px;
+  object-fit:cover;
+}
+input[type="submit"] {
+    display:block;
+   
 }
