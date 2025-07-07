@@ -18,7 +18,9 @@
 					<div class="dropdown-block"></div>
 					<div class="dropdown-content">
 						<a href="/" class="dropdown-link"> Home</a>
-						<a href = "/upload.html" class = "dropdown-link"> Upload </a>
+						<a href="/upload.html" class="dropdown-link">
+							Upload
+						</a>
 						<a href="/gallery.html" class="dropdown-link">
 							Gallery
 						</a>
@@ -55,7 +57,7 @@
 				<button id="gen-btn">Find a Haircut</button>
 			</section>
 			<div class="gen-img">
-				<h3 class = "img-title"></h3>
+				<h3 class="img-title"></h3>
 			</div>
 		</main>
 		<footer class="footer">
@@ -68,11 +70,20 @@
 		</footer>
 		<script src="nav.js"></script>
 		<script>
-			const genBtn = document.getElementById("gen-btn")
+			const genBtn = document.getElementById('gen-btn');
 
-			genBtn.addEventListener("click", () => {
+			genBtn.addEventListener('click', async () => {
 				// Setup fetch request to server
-			})
-			</script>
+				try {
+					const data = await fetch(
+						'https://findyourcut-server-6l27p.ondigitalocean.app/generate-img',
+					).then((res) => res.json());
+					location.href = data.location;
+				} catch (error) {
+					console.log(error);
+					location.pathname = '/gallery.html';
+				}
+			});
+		</script>
 	</body>
 </html>

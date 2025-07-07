@@ -42,7 +42,9 @@ main {
 	padding-right: 2rem;
 }
 /* buttons don't like taking on the font lol */
-button, input[type="submit"], input[type="file"] {
+button,
+input[type='submit'],
+input[type='file'] {
 	font-family: var(--primary-font);
 	border: none;
 	border-radius: 3px;

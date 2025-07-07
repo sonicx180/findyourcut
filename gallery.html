@@ -38,13 +38,6 @@
 					<img src="/images/lowfadecut.jpg" alt="Low fade" />
 					<h3>Low Fade Cut</h3>
 				</div>
-				<div class="haircut-item">
-					<img src="/images/lowfadecut.jpg" alt="Low fade" />
-					<h3>Low Fade Cut</h3>
-				</div>
-                	<div class="haircut-item">
-					<img src="/images/lowfadecut.jpg" alt="Low fade" />
-					<h3>Low Fade Cut</h3>
 			</div>
 		</main>
 		<footer class="footer">
@@ -56,5 +49,34 @@
 			</h3>
 		</footer>
 		<script src="nav.js"></script>
+		<script>
+			(async function () {
+				try {
+					// The container for all the haircuts
+					const hairContainer =
+						document.querySelector('.haircut-container');
+
+					const { files } = await fetch(
+						'https://findyourcut-server-6l27p.ondigitalocean.app/gallery',
+					).then((res) => res.json());
+
+					files.forEach((item) => {
+						const hairItem = document.createElement('div');
+						const hairImg = document.createElement('img');
+						const hairTitle = document.createElement('h3');
+						hairImg.src = item.location; // Set the image source to the link from the server
+						hairImg.alt = item.name;
+
+						hairTitle.textContent = item.name;
+						hairItem.className = 'haircut-item';
+						hairItem.append(hairImg, hairTitle);
+						hairContainer.appendChild(hairItem);
+					});
+				} catch (error) {
+					console.log('Failed,', error);
+					location.pathname = '/';
+				}
+			})();
+		</script>
 	</body>
 </html>

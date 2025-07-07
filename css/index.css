@@ -1,15 +1,14 @@
 section {
-    margin:20px;
+	margin: 20px;
 }
 .works {
-	display:flex;
+	display: flex;
 	align-items: center;
-    gap:20px;
-    width:75%;
+	gap: 20px;
+	width: 75%;
 }
 
 .hero-img {
-    border-radius:50%; /* round effect */
-    margin-left:auto;
+	border-radius: 50%; /* round effect */
+	margin-left: auto;
 }
-
