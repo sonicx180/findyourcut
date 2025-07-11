@@ -76,7 +76,7 @@
 				// Setup fetch request to server
 				try {
 					const data = await fetch(
-						'https://findyourcut-server-6l27p.ondigitalocean.app/generate-img',
+						'https://findyourcutbackend.sonicx180.hackclub.app/generate-img',
 					).then((res) => res.json());
 					location.href = data.location;
 				} catch (error) {
