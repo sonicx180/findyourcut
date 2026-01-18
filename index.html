@@ -76,9 +76,9 @@
 				// Setup fetch request to server
 				try {
 					const data = await fetch(
-						'https://findyourcutbackend.sonicx180.hackclub.app/generate-img',
+						'https://findyourcutbackend.vercel.app/generate-img',
 					).then((res) => res.json());
-					location.href = data.location;
+					document.querySelector(".hero-img").src = data.location
 				} catch (error) {
 					console.log(error);
 					location.pathname = '/gallery.html';
